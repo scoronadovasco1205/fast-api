@@ -1,6 +1,7 @@
 replicaCount: 1
-
 resources:
   requests:
     cpu: 50mi
     memory: 120m
+image:
+  tag: 797fd0
