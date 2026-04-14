@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Shorten commit id
         shell: bash
         run: |
@@ -26,6 +29,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: .
           push: true
           tags: scoronadovasco/fast-api:${{ env.COMMIT_ID }}
           
