@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-app
+  template:
+    metadata:
+      labels:
+        app: python-app
+    spec:
+      imagePullSecrets:
+      - name: docker-secret
+      containers:
+      - name: python
+        image: scoronadovasco/devops:v2
+        ports:
+        - containerPort: 5000
+        env:
+        - name: TITLE
+          value: "Bienvenidos al Sitio 1"
+        - name: FLASK_RUN_HOST
+          value: "0.0.0.0"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-app-svc 
+spec:
+  type: ClusterIP
+  ports:
+  - port: 5000
+  selector:
+    app: python-app

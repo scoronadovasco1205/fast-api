@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fast-api
+  description: api con fastapi en python
+  annotations:
+    github.com/project-slug: scoronadovasco/fast-api
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  owner: user:scoronadovasco
+  lifecycle: experimental

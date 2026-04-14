@@ -1,0 +1,13 @@
+site_name: fast-api
+site_description: 'Main documentation for Python App fast-api'
+repo_url: https://github.com/scoronadovasco/fast-api
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+
+# For sidebar navigation on https://backstage.io/, see `microsite/sidebars.js`
+nav:
+  - Overview:
+      - Getting started: 'docs/index.md'
