@@ -69,7 +69,7 @@ jobs:
       - name: argocd login
         shell: bash
         run: |
-          argocd login argocd-server.argocd \
+          argocd login argocd.test.com \
             --insecure  \
             --grpc-web \
             --username admin \
