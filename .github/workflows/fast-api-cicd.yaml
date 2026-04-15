@@ -82,21 +82,22 @@ jobs:
             --username admin \
             --password  ${{ secrets.ARGOCD_PASSWORD }}
 
+            # Línea 85-102: Reemplaza esta sección
       - name: Ensure argocd repo and app
         shell: bash
         run: |
-
+      
           # Connects the argocd repo
           repo="https://github.com/scoronadovasco1205/fast-api.git"
           argocd repo list | grep -q $repo || argocd repo add $repo
-
+      
           # Creates the argocd app
           argocd app get fast-api || argocd app create fast-api \
             --repo $repo \
             --path charts/fast-api \
             --dest-namespace dev \
             --dest-server https://kubernetes.default.svc \
-            --values values-dev.yaml \
+            --values charts/fast-api/values-dev.yaml \
             --revision main \
             --sync-policy manual \
             --sync-option CreateNamespace=true
