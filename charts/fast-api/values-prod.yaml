@@ -1,7 +1,19 @@
 replicaCount: 1
-
-
 resources:
   requests:
-    cpu: 50mi
-    memory: 120m
+    cpu: 50m
+    memory: 120Mi
+image:
+  tag: f46cca
+httpRoute:
+  enabled: false
+  hostnames: []
+  parentRefs: []
+  rules: []
+ingress:
+  enabled: false
+  hosts: []
+  tls: []
+service:
+  type: ClusterIP
+  port: 80
