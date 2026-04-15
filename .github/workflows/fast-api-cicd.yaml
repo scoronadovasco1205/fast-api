@@ -82,7 +82,7 @@ jobs:
       - name: argocd login
         shell: bash
         run: |
-          argocd login ${{ env.ARGOCD_SERVER }} \
+          argocd login 172.20.46.108 \
             --insecure  \
             --grpc-web \
             --username admin \
