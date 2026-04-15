@@ -3,8 +3,8 @@ image:
   repository: scoronadovasco/fast-api
   pullPolicy: IfNotPresent
   tag: fast-api-dev-latest
-imagePullSecrets: 
-  - fast-api-secret
+imagePullSecrets:
+  - name: fast-api-secret
 nameOverride: ""
 fullnameOverride: ""
 podAnnotations: {}
