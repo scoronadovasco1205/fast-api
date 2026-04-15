@@ -65,11 +65,17 @@ jobs:
           curl -ksSL -o argocd https://argocd-server.argocd/download/argocd-linux-amd64
           chmod +x argocd
           sudo mv ./argocd /usr/local/bin/argocd
+          
+      - name: Get ArgoCD Server IP
+        shell: bash
+        run: |
+          ARGOCD_SERVER=$(kubectl get svc argocd-server -n argocd -o jsonpath='{.spec.clusterIP}')
+          echo "ARGOCD_SERVER=$ARGOCD_SERVER" >> $GITHUB_ENV
 
       - name: argocd login
         shell: bash
         run: |
-          argocd login argocd.test.com \
+          argocd login ${{ env.ARGOCD_SERVER }} \
             --insecure  \
             --grpc-web \
             --username admin \
