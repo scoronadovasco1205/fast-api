@@ -4,7 +4,7 @@ resources:
     cpu: 50m
     memory: 120Mi
 image:
-  tag: 'a7f6b1'
+  tag: '2a8c6f'
 httpRoute:
   enabled: false
   hostnames: []
