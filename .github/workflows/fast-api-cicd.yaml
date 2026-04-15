@@ -70,10 +70,13 @@ jobs:
         shell: bash
         run: |
           argocd login 172.20.46.108 \
-            --insecure  \
+            --insecure \
             --grpc-web \
             --username admin \
-            --password  ${{ secrets.ARGOCD_PASSWORD }}
+            --password ${{ secrets.ARGOCD_PASSWORD }}
+          
+          # Verificar que el login funcionó
+          argocd account get-user-info
 
             # Línea 85-102: Reemplaza esta sección
       - name: Ensure argocd repo and app
