@@ -16,4 +16,4 @@ ingress:
   tls: []
 service:
   type: ClusterIP
-  port: 80
+  port: 5000
