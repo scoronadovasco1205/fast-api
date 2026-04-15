@@ -1,10 +1,10 @@
 replicaCount: 1
 resources:
   requests:
-    cpu: 50mi
-    memory: 120m
+    cpu: 50m
+    memory: 120Mi
 image:
-  tag: a8bc0d
+  tag: f46cca
 httpRoute:
   enabled: false
   hostnames: []
