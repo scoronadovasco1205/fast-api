@@ -4,20 +4,16 @@ resources:
     cpu: 50mi
     memory: 120m
 image:
-  tag: f46cca
-
-# Valores requeridos por NOTES.txt
+  tag: a8bc0d
 httpRoute:
   enabled: false
   hostnames: []
   parentRefs: []
   rules: []
-
 ingress:
   enabled: false
   hosts: []
   tls: []
-
 service:
   type: ClusterIP
   port: 80
