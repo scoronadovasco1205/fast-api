@@ -4,7 +4,7 @@ metadata:
   name: fast-api
   description: api con fastapi en python
   annotations:
-    github.com/project-slug: scoronadovasco/fast-api
+    github.com/project-slug: scoronadovasco1205/fast-api
     backstage.io/techdocs-ref: dir:.
 spec:
   type: service
