@@ -10,10 +10,6 @@ httpRoute:
   hostnames: []
   parentRefs: []
   rules: []
-ingress:
-  enabled: false
-  hosts: []
-  tls: []
 service:
   type: ClusterIP
   port: 5000
