@@ -83,7 +83,7 @@ jobs:
             --path charts/fast-api \
             --dest-namespace dev \
             --dest-server https://kubernetes.default.svc \
-            --values values.yaml \
+            --values values-dev.yaml \
             --revision main \
             --sync-policy manual \
             --sync-option CreateNamespace=true \
