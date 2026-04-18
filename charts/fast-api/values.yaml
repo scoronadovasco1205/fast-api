@@ -51,3 +51,5 @@ volumeMounts: []
 nodeSelector: {}
 tolerations: []
 affinity: {}
+httpRoute:
+  enabled: false
